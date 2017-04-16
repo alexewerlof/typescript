@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "compile": "rm -rf ./build && tsc",
+    "document": "typedoc --out ./docs ./src"
+  },
+  "dependencies": {
+    "@types/node": "^7.0.12",
+    "tslib": "^1.6.0",
+    "typedoc": "^0.5.10",
+    "typescript": "^2.2.2"
+  }
+}
