@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig-base",
+    "compilerOptions": {
+        "outDir": "../test",
+        "types": [
+            "node",
+            "mocha",
+            "chai"
+        ]
+    },
+    "include": [
+        "**/*.spec.ts",
+        "**/*.test.ts"
+    ],
+    "exclude": [
+        "../node_modules/**/*"
+    ]
+}

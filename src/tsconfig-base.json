@@ -2,24 +2,12 @@
     "compilerOptions": {
         "module": "commonjs",
         "sourceMap": true,
-        "outDir": "build",
         "target": "es2016",
         "noEmitOnError": true,
-        "declaration": true,
-        "declarationDir": "declarations",
         "alwaysStrict": true,
         "importHelpers": true,
         "lib": [
             "es2015"
-        ],
-        "types": [
-            "node"
         ]
-    },
-    "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "./node_modules/**/*"
-    ]
+    }
 }

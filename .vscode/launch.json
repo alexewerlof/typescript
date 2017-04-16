@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "preLaunchTask": "compile",
+            "preLaunchTask": "prestart",
             "program": "${file}",
             "outFiles": ["index.js"]
         },

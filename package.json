@@ -1,10 +1,17 @@
 {
   "scripts": {
-    "compile": "rm -rf ./build && tsc",
+    "prestart": "rm -rf ./build && tsc -p src/tsconfig-src.json",
+    "start": "node ./build",
+    "pretest": "rm -rf ./test && tsc -p src/tsconfig-test.json",
+    "test": "mocha test",
     "document": "rm -rf ./doc && typedoc --out ./docs ./src && touch ./docs/.nojekyll"
   },
   "dependencies": {
+    "@types/chai": "^3.5.0",
+    "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
     "tslib": "^1.6.0",
     "tslint": "^5.1.0",
     "typedoc": "^0.5.10",

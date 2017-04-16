@@ -1,0 +1,19 @@
+{
+    "extends": "./tsconfig-base",
+    "compilerOptions": {
+        "outDir": "../build",
+        "types": [
+            "node"
+        ],
+        "declaration": true,
+        "declarationDir": "../tsdecl"
+    },
+    "include": [
+        "**/*.ts"
+    ],
+    "exclude": [
+        "*.spec.ts",
+        "*.test.ts",
+        "./node_modules/**/*"
+    ]
+}

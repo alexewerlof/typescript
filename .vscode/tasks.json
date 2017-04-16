@@ -9,9 +9,14 @@
     "suppressTaskName": true,
     "tasks": [
         {
-            "taskName": "compile",
+            "taskName": "prestart",
             "isBuildCommand": true,
-            "args": [ "run", "compile"]
+            "args": [ "run", "prestart"]
+        },
+        {
+            "taskName": "start",
+            "isBuildCommand": true,
+            "args": [ "run", "start"]
         },
         {
             "taskName": "install",
