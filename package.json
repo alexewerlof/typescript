@@ -1,7 +1,7 @@
 {
   "scripts": {
     "compile": "rm -rf ./build && tsc",
-    "document": "typedoc --out ./docs ./src"
+    "document": "rm -rf ./doc && typedoc --out ./docs ./src && touch ./docs/.nojekyll"
   },
   "dependencies": {
     "@types/node": "^7.0.12",
