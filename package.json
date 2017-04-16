@@ -1,8 +1,11 @@
 {
   "scripts": {
+    "postinstall": "echo yarn run precommit > .git/hooks/pre-commit",
+    "precommit": "yarn run test",
     "prestart": "rm -rf ./build && tsc -p src/tsconfig-src.json",
     "start": "node ./build",
-    "pretest": "rm -rf ./test && tsc -p src/tsconfig-test.json",
+    "lint": "tslint src/**/*.ts",
+    "pretest": "yarn run lint && rm -rf ./test && tsc -p src/tsconfig-test.json",
     "test": "mocha test",
     "document": "rm -rf ./doc && typedoc --out ./docs ./src && touch ./docs/.nojekyll"
   },

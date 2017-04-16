@@ -28,7 +28,6 @@
     "no-string-throw": true,
     "no-unsafe-finally": true,
     "no-unused-expression": true,
-    "no-unused-new": true,
     "no-use-before-declare": true,
     "radix": true,
     "switch-default": true,
@@ -124,14 +123,6 @@
     "no-namespace": false,       // only enable this if you are not using modules/namespaces
     "no-reference": true,        // in general you should use a module system and not /// reference imports
     "object-literal-shorthand": false,  // object-literal-shorthand offers an abbreviation not an abstraction
-    "space-before-function-paren": false,   // turn this on if this is really your coding standard
-
-    /**
-      * Deprecated rules.  The following rules are deprecated for various reasons.
-      */
-    "missing-optional-annotation": false,  // now supported by TypeScript compiler
-    "no-switch-case-fall-through": false,  // now supported by TypeScript compiler
-//    "no-unused-variable": false,           // now supported by TypeScript 2.0 compiler
-    "typeof-compare": false                // the valid-typeof rule is currently superior to this version
+    "space-before-function-paren": false   // turn this on if this is really your coding standard
   }
 }
