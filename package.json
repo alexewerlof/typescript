@@ -1,16 +1,19 @@
 {
+  "name": "typescript",
+  "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
-    "postinstall": "echo \"#!/bin/sh\nyarn run precommit\" > .git/hooks/pre-commit",
-    "precommit": "yarn run test",
+    "postinstall": "echo \"#!/bin/sh\nyarn run precommit\ngit update-index --add .\" > .git/hooks/pre-commit && chmod a+x .git/hooks/pre-commit",
+    "precommit": "yarn run test && yarn run prestart && yarn run document",
     "prestart": "rm -rf ./build && tsc -p src/tsconfig-src.json",
     "start": "node ./build",
     "lint": "tslint src/**/*.ts",
     "pretest": "yarn run lint && rm -rf ./test && tsc -p src/tsconfig-test.json",
     "test": "mocha test",
-    "document": "rm -rf ./doc && typedoc --out ./docs ./src && touch ./docs/.nojekyll"
+    "document": "rm -rf ./doc && typedoc --tsconfig src/tsconfig-src.json --out ./docs ./src/ && touch ./docs/.nojekyll"
   },
   "dependencies": {
-    "@types/chai": "^3.5.0",
+    "@types/chai": "^3.5.0", 
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
     "chai": "^3.5.0",
