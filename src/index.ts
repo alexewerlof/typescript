@@ -5,9 +5,9 @@ import { bye } from './feeeky';
  * @param message - the message to print
  * @return the value that should be returned
  */
-async function say(message, strong = false): Promise<boolean> {
+async function say(message: string, strong: boolean = false): Promise<boolean> {
     console.log(bye(message));
-    return true;
+    return true ;
 }
 
 say('Alex');

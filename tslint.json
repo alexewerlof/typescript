@@ -1,0 +1,137 @@
+/**
+  * These rule settings are a broad, general recommendation for a good default
+  * configuration, but should be tuned for personal or team preferences if needed.
+  */
+
+{
+  "rules": {
+    /**
+      * Security Rules. The following rules should be turned on because they find security issues
+      * or are recommended in the Microsoft Secure Development Lifecycle (SDL)
+      */
+    "no-eval": true,
+
+    /**
+      * Common Bugs and Correctness. The following rules should be turned on because they find
+      * common bug patterns in the code or enforce type safety.
+      */
+    "forin": true,
+    "no-any": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-duplicate-variable": true,
+    "no-empty": true,
+    "no-for-in-array": false,
+    "no-invalid-this": true,
+    "no-string-literal": true,
+    "no-string-throw": true,
+    "no-unsafe-finally": true,
+    "no-unused-expression": true,
+    "no-unused-new": true,
+    "no-use-before-declare": true,
+    "radix": true,
+    "switch-default": true,
+    "triple-equals": [true, "allow-null-check"],
+
+    /**
+      * Code Clarity. The following rules should be turned on because they make the code
+      * generally more clear to the reader.
+      */
+    "adjacent-overload-signatures": true,
+    "array-type": [true, "array"],
+    "arrow-parens": false, // for simple functions the parens on arrow functions are not needed
+    "callable-types": true,
+    "class-name": true,
+    "comment-format": [true, "check-space", "check-uppercase"],
+    "interface-name": [true, "always-prefix"],
+    "jsdoc-format": true,
+    "max-classes-per-file": [true, 3],  // we generally recommend making one public class per file
+    "max-file-line-count": [true, 500],
+    "max-line-length": [true, 140],
+    "member-access": true,
+    "member-ordering": [true, { "order": "fields-first" }],
+    "new-parens": true,
+    "no-construct": true,
+    "no-default-export": true,
+    "no-inferrable-types": false, // turn no-inferrable-types off in order to make the code consistent in its use of type decorations
+    "no-null-keyword": false, // turn no-null-keyword off and use undefined to mean not initialized and null to mean without a value
+    "no-parameter-properties": true,
+    "no-require-imports": true,
+    "no-shadowed-variable": true,
+    "no-var-keyword": true,
+    "no-var-requires": true,
+    "object-literal-sort-keys": false, // turn object-literal-sort-keys off and sort keys in a meaningful manner
+    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    "only-arrow-functions": false,  // there are many valid reasons to declare a function
+    "ordered-imports": [true, "case-insensitive"],
+    "prefer-const": false,
+    "prefer-for-of": true,
+    "typedef": [true, "call-signature", "parameter", "property-declaration", "variable-declaration", "member-variable-declaration"],
+    "unified-signatures": true,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+
+    /**
+      * Whitespace related rules. The only recommended whitespace strategy is to pick a single format and
+      * be consistent.
+      */
+    "align": [true, "parameters", "statements"],
+    "curly": true,
+    "eofline": true,
+    "import-spacing": true,
+    "indent": [true, "spaces"],
+    "linebreak-style": true,
+    "no-consecutive-blank-lines": true,
+    "no-trailing-whitespace": true,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
+    "quotemark": [true, "single"],
+    "semicolon": [true, "always"],
+    "trailing-comma": [true, {"singleline": "never", "multiline": "always"}], // forcing trailing commas for multi-line
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "onespace",
+        "property-declaration": "onespace",
+        "variable-declaration": "onespace"
+      }
+    ],
+    "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
+
+    /**
+      * Controversial/Configurable rules.
+      */
+    "ban": false,                // only enable this if you have some code pattern that you want to ban
+    "cyclomatic-complexity": false,
+    "file-header": false,  // enable this rule only if you are legally required to add a file header
+    "import-blacklist": false,  // enable and configure this as you desire
+    "interface-over-type-literal": false,  // there are plenty of reasons to prefer interfaces
+    "no-angle-bracket-type-assertion": false,  // pick either type-cast format and use it consistently
+    "no-empty-interface": false,  // it is currently better to use the MS version of this rule
+    "no-inferred-empty-object-type": false,  // if the compiler is satisfied then this is probably not an issue
+    "no-internal-module": false, // only enable this if you are not using internal modules
+    "no-magic-numbers": false,  // by default it will find too many false positives
+    "no-mergeable-namespace": false,  // your project may require mergeable namespaces
+    "no-namespace": false,       // only enable this if you are not using modules/namespaces
+    "no-reference": true,        // in general you should use a module system and not /// reference imports
+    "object-literal-shorthand": false,  // object-literal-shorthand offers an abbreviation not an abstraction
+    "space-before-function-paren": false,   // turn this on if this is really your coding standard
+
+    /**
+      * Deprecated rules.  The following rules are deprecated for various reasons.
+      */
+    "missing-optional-annotation": false,  // now supported by TypeScript compiler
+    "no-switch-case-fall-through": false,  // now supported by TypeScript compiler
+//    "no-unused-variable": false,           // now supported by TypeScript 2.0 compiler
+    "typeof-compare": false                // the valid-typeof rule is currently superior to this version
+  }
+}
