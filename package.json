@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "postinstall": "echo yarn run precommit > .git/hooks/pre-commit",
+    "postinstall": "echo \"#!/bin/sh\nyarn run precommit\" > .git/hooks/pre-commit",
     "precommit": "yarn run test",
     "prestart": "rm -rf ./build && tsc -p src/tsconfig-src.json",
     "start": "node ./build",
