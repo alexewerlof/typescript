@@ -65,16 +65,44 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="introduction">Introduction</h1>
+				<p>About a year ago I wrote about <a href="https://medium.freecodecamp.com/when-should-i-use-typescript-311cb5fe801b">when to use TypeScript</a>.
+					Today I&#39;m releasing a boilerplate for Node applications. The main use case is a library that is going to be published as an NPM module
+				with documentation on github.</p>
 				<p>This is a typescript boilerplate project that supports:</p>
 				<ul>
 					<li>visual studio code + node debugging in IDE</li>
 					<li>tslint</li>
 					<li>mocha / chai tests</li>
-					<li>jsdoc and document generation</li>
-					<li>Clean JS output that&#39;s ready to use in Node projects</li>
+					<li>jsdoc and HTML document generation</li>
+					<li>Clean JS output that&#39;s ready to use in Node projects (using <code>tslib</code>)</li>
 					<li>TS type definition files that&#39;s ready to use in TS projects</li>
 					<li>Pre-commit task to keep the documents up to date</li>
 				</ul>
+				<h1 id="how-to-use">How to use</h1>
+				<pre><code>git <span class="hljs-keyword">clone</span> <span class="hljs-title">git</span>@github.com:userpixel/typescript.git
+</code></pre><p>Then modify the files as you wish.</p>
+				<h1 id="what-is-where-">What is where?</h1>
+				<ul>
+					<li><code>src/</code> Write your TypeScript files here. It can have sub directories if you want.
+					Each file has its own test next to it named <code>FILENAME.spec.ts</code> or <code>FILENAME.test.ts</code>.</li>
+					<li><code>.vscode</code> Your Visual Studio Code configurations. You can tweak them if you want but the main part is the <code>tasks.json</code> which defines the <code>compile</code> build task as well as <code>test</code> and <code>document</code>.</li>
+				</ul>
+				<h2 id="auto-generated-dirs">Auto generated dirs</h2>
+				<p>The following directories are auto generated and shouldn&#39;t be changed manually:</p>
+				<ul>
+					<li><code>build/</code> the Javascript version of the TypeScript files. They contain documentation and are cleanly compiled so they are readable.</li>
+					<li><code>docs</code> HTML version if your JSDoc annotations from the code</li>
+					<li><code>test</code> Javascript test files (all files named <code>FILENAME.spec.ts</code> and <code>FILENAME.tests.ts</code> end up here after compilation)</li>
+					<li><code>tsdecl</code> TypeScript declaration files that can be used when you release this module as a library and your user wants to use it their in TypeScript projects.</li>
+				</ul>
+				<h1 id="license">License</h1>
+				<p>It&#39;s MIT so you can use the code for proprietary projects or extend it without contributing back.</p>
+				<h1 id="contributing">Contributing</h1>
+				<p>Remember the use case of this project. It&#39;s not going to be used for React and front end code. Just node and ideally a published lib to npm (and github).</p>
+				<ol>
+					<li>Discuss issues and ideas at <a href="https://github.com/userpixel/typescript/issues">https://github.com/userpixel/typescript/issues</a></li>
+					<li>Make PRs</li>
+				</ol>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
