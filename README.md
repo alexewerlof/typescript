@@ -1,7 +1,7 @@
 # Introduction
 
 About a year ago I wrote about [when to use TypeScript](https://medium.freecodecamp.com/when-should-i-use-typescript-311cb5fe801b).
-Today I'm releasing a boilerplate for Node applications. The main use case is a library that is going to be published as an NPM module
+Today I'm releasing a boilerplate for Node applications. The main use case is a library that is going to be published as a NPM module
 with documentation on github.
 
 This is a typescript boilerplate project that supports:
@@ -20,7 +20,16 @@ This is a typescript boilerplate project that supports:
 git clone git@github.com:userpixel/typescript.git
 ```
 
+Or just [Download it](https://github.com/userpixel/typescript/archive/master.zip).
+
 Then modify the files as you wish.
+
+## Prerequisites
+
+1. Get [VSCode](https://code.visualstudio.com/).
+2. Make sure you have [Node (and NPM)](https://nodejs.org/en/)
+2. Install [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) 
+2. Open the code dir and make sure to install the dependencies (`yarn` on command line or Ctrl+Shift+P "Run Task" > "install" in VSCode).
 
 # What is where?
 
