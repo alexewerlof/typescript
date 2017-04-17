@@ -28,7 +28,8 @@
         },
         {
             "taskName": "test",
-            "args": ["run", "test"]
+            "args": ["run", "test"],
+            "isTestCommand": true
         },
         {
             "taskName": "document",
