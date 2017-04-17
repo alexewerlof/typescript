@@ -29,7 +29,12 @@ Then modify the files as you wish.
 1. Get [VSCode](https://code.visualstudio.com/).
 2. Make sure you have [Node (and NPM)](https://nodejs.org/en/)
 2. Install [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) 
-2. Open the code dir and make sure to install the dependencies (`yarn` on command line or Ctrl+Shift+P "Run Task" > "install" in VSCode).
+2. Open the code dir and make sure to install the dependencies (`yarn` on command line or F1 > "Run Task" > "install" in VSCode).
+
+## In VSCode
+
+Every time you wanna run it just press Ctrl+Shift+B to build.
+To run tests, press F1 > "Run Task" > "test".
 
 # What is where?
 
