@@ -49,7 +49,7 @@ The following directories are auto generated and shouldn't be changed manually:
 * `build/` the Javascript version of the TypeScript files. They contain documentation and are cleanly compiled so they are readable.
 * `docs` HTML version if your JSDoc annotations from the code
 * `test` Javascript test files (all files named `FILENAME.spec.ts` and `FILENAME.tests.ts` end up here after compilation)
-* `tsdecl` TypeScript declaration files that can be used when you release this module as a library and your user wants to use it their in TypeScript projects.
+* `tsdecl` TypeScript declaration files that can be used when you release this module as a library and your user wants to use it in their TypeScript projects.
 
 # License
 
